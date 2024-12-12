@@ -1,0 +1,30 @@
+{
+  "name": "hello-npm-eskey",
+  "version": "2.1.1",
+  "description": "",
+  "main": "./dist/cjs/index.js",
+  "module": "./dist/esm/index.js",
+  "types": "./dist/esm/index.d.ts",
+  "files": [
+    "dist",
+    "README.md"
+  ],
+  "scripts": {
+    "build": "rm -rf ./dist && npm run build:esm && npm run build:cjs",
+    "build:esm": "tsc",
+    "build:cjs": "tsc --module commonjs --outDir dist/cjs"
+  },
+  "author": "eskey",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/react": "^19.0.1",
+    "react": "^19.0.0",
+    "tslib": "^2.8.1",
+    "typescript": "^5.7.2"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/KSalenkov/npm-lesson"
+  },
+  "homepage": "https://github.com/KSalenkov/npm-lesson"
+}
